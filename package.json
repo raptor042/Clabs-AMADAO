@@ -1,0 +1,22 @@
+{
+  "name": "amadao",
+  "version": "1.0.0",
+  "description": "A Regenerative Finance DApp created with Celo",
+  "main": "index.js",
+  "scripts": {
+    "mix": "npx mix",
+    "tailwind" : "npx tailwindcss -i ./src/css/styles.css -o ./dist/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^3.10.4"
+  },
+  "devDependencies": {
+    "html-loader": "^4.2.0",
+    "laravel-mix": "^6.0.49",
+    "mix-tailwindcss": "^1.3.0",
+    "tailwindcss": "^3.1.8"
+  }
+}
