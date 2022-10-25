@@ -23,7 +23,8 @@ jobs:
       - name: Install NPM dependencies and Compile assets for Production
         run: |
           npm install
-          npm run build
+          npm run mix
+          npm run tailwind
       - name: List Output Files
         run: ls
       - name: Push
@@ -32,5 +33,5 @@ jobs:
           REPO: self
           BRANCH: build
           FOLDER: dist
-          GITHUB_TOKEN: $
+          GITHUB_TOKEN: ${{secrets.CLABS_AMADAO}}
           MESSAGE: "Build: {{sha}} {msg}"

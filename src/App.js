@@ -1,4 +1,4 @@
-const Alpine = require("alpinejs");
+const Alpine = require("alpinejs/dist/module.cjs");
 const Index = require("./html/index.html");
 
 // import Alpine from "alpinejs";
