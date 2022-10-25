@@ -1,11 +1,20 @@
-const Alpine = require("alpinejs");
-const Index = require("./html/index.html");
+// const Alpine = require("alpinejs");
+// const Index = require("./html/index.html");
+
+import Alpine from "alpinejs";
+import Index from "./html/index.html";
+
 
 const initAlpine = () => {
     window.Alpine = Alpine;
+
+    console.log(window.Alpine);
+
     Alpine.start();
 
     document.getElementById("clabs").innerHTML = Index;
 }
 
-module.exports = initAlpine;
+// module.exports = initAlpine;
+
+export default initAlpine;

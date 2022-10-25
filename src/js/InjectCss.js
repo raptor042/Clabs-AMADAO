@@ -8,4 +8,6 @@ const injectCSS = () => {
     head.appendChild(link);
 };
 
-module.exports = injectCSS;
+// module.exports = injectCSS;
+
+export default injectCSS;
