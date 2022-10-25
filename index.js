@@ -2983,12 +2983,21 @@ var module_default = src_default;
 
 var Alpine = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 var Index = __webpack_require__(/*! ./html/index.html */ "./src/html/index.html");
+
+// import Alpine from "alpinejs";
+// import Index from "./html/index.html";
+
 var initAlpine = function initAlpine() {
   window.Alpine = Alpine;
+
+  // console.log(window.Alpine);
+
   Alpine.start();
   document.getElementById("clabs").innerHTML = Index;
 };
 module.exports = initAlpine;
+
+// export default initAlpine;
 
 /***/ }),
 
@@ -3008,6 +3017,8 @@ var injectCSS = function injectCSS() {
 };
 module.exports = injectCSS;
 
+// export default injectCSS;
+
 /***/ }),
 
 /***/ "./src/html/index.html":
@@ -3022,7 +3033,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 // Module
-var code = "<div id=\"clabs-app\" x-data=\"{ open : true }\">\n    <div class=\"clabs-container clabs-bg-black\">\n        <div class=\"clabs-container clabs-mx-auto clabs-px-10\">\n            <h1 class=\"clabs-text-white\">AMADAO.VERIFICATION</h1>\n        </div>\n    </div>\n    <div class=\"clabs-container\">\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\n            <div class=\"clabs-basis-1/4\"></div>\n            <div class=\"clabs-basis-1/2\">\n                <div class=\"clabs-container clabs-mx-auto clabs-px-10 clabs-shadow-md clabs-rounded-md\">\n                    <p class=\"clabs-text-black\">\n                        C-Labs has offset 2,365 tons of Carbon dioxide through sponsoring green network.\n                    </p>\n                </div>\n            </div>\n            <div class=\"clabs-basis-1/4\"></div>\n        </div>\n    </div>\n</div>";
+var code = "<div id=\"clabs-app\" x-data=\"{ open : true }\">\n    <div class=\"clabs-container clabs-bg-black\">\n        <div class=\"clabs-container clabs-mx-auto clabs-px-10\">\n            <h1 class=\"clabs-text-white\">AMADAO.VERIFICATION</h1>\n        </div>\n    </div>\n    <div class=\"clabs-container\">\n        \n    </div>\n    <div class=\"clabs-container\">\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\n            <div class=\"clabs-basis-1/4\"></div>\n            <div class=\"clabs-basis-1/2\">\n                <div class=\"clabs-container clabs-mx-auto clabs-px-10 clabs-shadow-md clabs-rounded-md\">\n                    <p class=\"clabs-text-black\">\n                        C-Labs has offset 2,365 tons of Carbon dioxide through sponsoring green network.\n                    </p>\n                </div>\n            </div>\n            <div class=\"clabs-basis-1/4\"></div>\n        </div>\n    </div>\n</div>";
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
@@ -3092,6 +3103,10 @@ var __webpack_exports__ = {};
   \******************/
 var InitAlpine = __webpack_require__(/*! ./src/App */ "./src/App.js");
 var InjectCSS = __webpack_require__(/*! ./src/js/InjectCss */ "./src/js/InjectCss.js");
+
+// import InitAlpine from "./src/App";
+// import InjectCSS from "./src/js/InjectCss";
+
 InitAlpine();
 InjectCSS();
 })();
