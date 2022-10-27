@@ -8,8 +8,10 @@
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+var Index = __webpack_require__(/*! ./html/index.html */ "./src/html/index.html");
 var initJquery = function initJquery() {
   $(function () {
+    $("#clabs").html(Index);
     $("a.clabs-underline").on("click", function () {
       $("#download").hide();
     });
@@ -34,6 +36,66 @@ var injectCSS = function injectCSS() {
   head.appendChild(link);
 };
 module.exports = injectCSS;
+
+/***/ }),
+
+/***/ "./src/html/index.html":
+/*!*****************************!*\
+  !*** ./src/html/index.html ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/html-loader/dist/runtime/getUrl.js */ "./node_modules/html-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../public/SponsorExample.png */ "./src/public/SponsorExample.png"), __webpack_require__.b);
+// Module
+var ___HTML_LOADER_REPLACEMENT_0___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_0___);
+var code = "<div id=\"clabs-app\">\n    <div class=\"clabs-container clabs-bg-black\">\n        <div class=\"clabs-container clabs-mx-auto clabs-px-10\">\n            <h3 class=\"clabs-text-white\">AMADAO.VERIFICATION</h3>\n        </div>\n    </div>\n    <div class=\"clabs-container\">\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\n            <div class=\"clabs-basis-1/4\"></div>\n            <div class=\"clabs-basis-1/2\">\n                <div class=\"clabs-container clabs-mx-auto\">\n                    <img src=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\" alt=\"CLABS\">\n                </div>\n            </div>\n            <div class=\"clabs-basis-1/4\"></div>\n        </div>\n    </div>\n    <div class=\"clabs-container\">\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\n            <div class=\"clabs-basis-1/4\"></div>\n            <div class=\"clabs-basis-1/2 clabs-bg-[url(\"../public/Hexagon-only.png\")]\">\n                <div class=\"clabs-container clabs-mx-auto clabs-px-10 clabs-shadow-md clabs-rounded-md\">\n                    <p class=\"clabs-text-black\">\n                        C-Labs has offset 2,365 tons of Carbon dioxide through sponsoring green network.\n                    </p>\n                </div>\n            </div>\n            <div class=\"clabs-basis-1/4\"></div>\n        </div>\n    </div>\n    <div class=\"clabs-container clabs-flex clabs-flex-row clabs-bg-green-500\">\n        <div class=\"clabs-basis-1/4\"></div>\n        <div class=\"clabs-basis-1/2\">\n            <h2 class=\"clabs-text-white clabs-underline\">\n                46k transactions\n            </h2>\n        </div>\n        <div class=\"clabs-basis-1/4\"></div>\n    </div>\n    <div class=\"clabs-container clabs-flex clabs-flex-col\">\n        <div class=\"clabs-container clabs-flex clabs-flex-col\">\n            <h3 class=\"clabs-font-semibold clabs-text-black\">Join our Mission:</h3>\n            <h2 class=\"clabs-font-black clabs-text-black\">PLANT im TREES</h2>\n        </div>\n        <div class=\"clabs-container\">\n            <p class=\"clabs-text-black clabs-font-medium\">\n                Together, we'll offset 24k Tons of CO2 per year.\n            </p>\n        </div>\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\n            <div class=\"clabs-basis-1/4\"></div>\n            <div class=\"clabs-basis-1/2\">\n                <p class=\"clabs-text-black clabs-font-medium\">\n                    Use the AMA Timeer App daily to to offset the energy used by our devices.\n                </p>\n            </div>\n            <div class=\"clabs-basis-1/4\"></div>\n        </div>\n        <div class=\"clabs-container clabs-bg-green-500\" id=\"download\">\n            <h2 class=\"clabs-text-white clabs-font-medium\">\n                Download\n            </h2>\n        </div>\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\n            <div class=\"clabs-basis-1/4\"></div>\n            <div class=\"clabs-basis-1/2\">\n                <p class=\"clabs-text-black clabs-font-medium\">\n                    Apply <a href=\"#\" class=\"clabs-underline\">here</a> to sponsor your team or other to work green.\n                </p>\n            </div>\n            <div class=\"clabs-basis-1/4\"></div>\n        </div>\n    </div>\n</div>";
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./node_modules/html-loader/dist/runtime/getUrl.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/html-loader/dist/runtime/getUrl.js ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  }
+
+  if (!url) {
+    return url;
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = String(url.__esModule ? url.default : url);
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  }
+
+  if (options.maybeNeedQuotes && /[\t\n\f\r "'=<>`]/.test(url)) {
+    return "\"".concat(url, "\"");
+  }
+
+  return url;
+};
 
 /***/ }),
 
@@ -10955,6 +11017,17 @@ return jQuery;
 } );
 
 
+/***/ }),
+
+/***/ "./src/public/SponsorExample.png":
+/*!***************************************!*\
+  !*** ./src/public/SponsorExample.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "70efcc0161fff53b.png";
+
 /***/ })
 
 /******/ 	});
@@ -10982,6 +11055,81 @@ return jQuery;
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/";
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
