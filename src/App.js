@@ -1,22 +1,11 @@
-const Alpine = require("alpinejs");
-const Index = require("./html/index.html");
+const $ = require("jquery");
 
-// import Alpine from "alpinejs";
-// import Index from "./html/index.html";
+const initJquery = () => {
+    $(function() {
+        $("a.clabs-underline").on("click", () => {
+            $("#download").hide();
+        })
+    });
+};
 
-
-const initAlpine = () => {
-    document.addEventListener("DOMContentLoaded", event => {
-        if(!window.Alpine) {
-            window.Alpine = Alpine;
-
-            Alpine.start();
-
-            document.getElementById("clabs").innerHTML = Index;
-        }
-    })
-}
-
-module.exports = initAlpine;
-
-// export default initAlpine;
+module.exports = initJquery;

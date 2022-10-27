@@ -9,5 +9,3 @@ const injectCSS = () => {
 };
 
 module.exports = injectCSS;
-
-// export default injectCSS;

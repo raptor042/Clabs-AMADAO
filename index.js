@@ -1,9 +1,6 @@
-const InitAlpine = require("./src/App");
 const InjectCSS = require("./src/js/InjectCss");
+const initJquery = require("./src/App");
 
-// import InitAlpine from "./src/App";
-// import InjectCSS from "./src/js/InjectCss";
-
-InitAlpine();
+initJquery();
 
 InjectCSS();
