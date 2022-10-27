@@ -1,4 +1,4 @@
-const Alpine = require("alpinejs/dist/module.cjs");
+const Alpine = require("alpinejs");
 const Index = require("./html/index.html");
 
 // import Alpine from "alpinejs";
@@ -6,13 +6,15 @@ const Index = require("./html/index.html");
 
 
 const initAlpine = () => {
-    window.Alpine = Alpine;
+    document.addEventListener("DOMContentLoaded", event => {
+        if(!window.Alpine) {
+            window.Alpine = Alpine;
 
-    // console.log(window.Alpine);
+            Alpine.start();
 
-    Alpine.start();
-
-    document.getElementById("clabs").innerHTML = Index;
+            document.getElementById("clabs").innerHTML = Index;
+        }
+    })
 }
 
 module.exports = initAlpine;
