@@ -1,5 +1,8 @@
 const $ = require("jquery");
-const Index = require("./html/index.html");
+const fs = require("fs");
+const Index = fs.readFileSync("./html/index.html");
+
+// const Index = require("./html/index.html");
 
 const initJquery = () => {
     console.log(Index);

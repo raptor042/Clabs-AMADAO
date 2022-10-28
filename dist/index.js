@@ -8,7 +8,11 @@
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-var Index = __webpack_require__(/*! ./html/index.html */ "./src/html/index.html");
+var fs = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'fs'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var Index = fs.readFileSync("./html/index.html");
+
+// const Index = require("./html/index.html");
+
 var initJquery = function initJquery() {
   console.log(Index);
   $(function () {
@@ -37,24 +41,6 @@ var injectCSS = function injectCSS() {
   head.appendChild(link);
 };
 module.exports = injectCSS;
-
-/***/ }),
-
-/***/ "./src/html/index.html":
-/*!*****************************!*\
-  !*** ./src/html/index.html ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// Module
-var code = "<div id=\"clabs-app\">\r\n    <div class=\"clabs-container clabs-bg-black\">\r\n        <div class=\"clabs-container clabs-mx-auto clabs-px-10\">\r\n            <h3 class=\"clabs-text-white\">AMADAO.VERIFICATION</h3>\r\n        </div>\r\n    </div>\r\n    <div class=\"clabs-container\">\r\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n            <div class=\"clabs-basis-1/2\">\r\n                <div class=\"clabs-container clabs-mx-auto\">\r\n                    <img src=\"https://cdn.jsdelivr.net/gh/benjamin1234-ben/Clabs-AMADAO@master/public/SponsorExample.png\" alt=\"CLABS\">\r\n                </div>\r\n            </div>\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"clabs-container\">\r\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n            <div class=\"clabs-basis-1/2 clabs-bg-[url(\"https://cdn.jsdelivr.net/gh/benjamin1234-ben/Clabs-AMADAO@master/public/Hexagon-only.png\")]\">\r\n                <div class=\"clabs-container clabs-mx-auto clabs-px-10 clabs-shadow-md clabs-rounded-md\">\r\n                    <p class=\"clabs-text-black\">\r\n                        C-Labs has offset 2,365 tons of Carbon dioxide through sponsoring green network.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"clabs-container clabs-flex clabs-flex-row clabs-bg-green-500\">\r\n        <div class=\"clabs-basis-1/4\"></div>\r\n        <div class=\"clabs-basis-1/2\">\r\n            <h2 class=\"clabs-text-white clabs-underline\">\r\n                46k transactions\r\n            </h2>\r\n        </div>\r\n        <div class=\"clabs-basis-1/4\"></div>\r\n    </div>\r\n    <div class=\"clabs-container clabs-flex clabs-flex-col\">\r\n        <div class=\"clabs-container clabs-flex clabs-flex-col\">\r\n            <h3 class=\"clabs-font-semibold clabs-text-black\">Join our Mission:</h3>\r\n            <h2 class=\"clabs-font-black clabs-text-black\">PLANT im TREES</h2>\r\n        </div>\r\n        <div class=\"clabs-container\">\r\n            <p class=\"clabs-text-black clabs-font-medium\">\r\n                Together, we'll offset 24k Tons of CO2 per year.\r\n            </p>\r\n        </div>\r\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n            <div class=\"clabs-basis-1/2\">\r\n                <p class=\"clabs-text-black clabs-font-medium\">\r\n                    Use the AMA Timeer App daily to to offset the energy used by our devices.\r\n                </p>\r\n            </div>\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n        </div>\r\n        <div class=\"clabs-container clabs-bg-green-500\" id=\"download\">\r\n            <h2 class=\"clabs-text-white clabs-font-medium\">\r\n                Download\r\n            </h2>\r\n        </div>\r\n        <div class=\"clabs-container clabs-flex clabs-flex-row\">\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n            <div class=\"clabs-basis-1/2\">\r\n                <p class=\"clabs-text-black clabs-font-medium\">\r\n                    Apply <a href=\"#\" class=\"clabs-underline\">here</a> to sponsor your team or other to work green.\r\n                </p>\r\n            </div>\r\n            <div class=\"clabs-basis-1/4\"></div>\r\n        </div>\r\n    </div>\r\n</div>";
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
 /***/ }),
 
@@ -11003,35 +10989,6 @@ return jQuery;
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
