@@ -13,7 +13,6 @@ var initHTML = function initHTML() {
   fetch("https://cdn.jsdelivr.net/gh/benjamin1234-ben/Clabs-AMADAO@master/src/html/index.html").then(function (res) {
     return res.text();
   }).then(function (text) {
-    console.log(text);
     Index = text;
   })["catch"](function (err) {
     return console.log(err);
@@ -21,7 +20,8 @@ var initHTML = function initHTML() {
 };
 var initJquery = function initJquery() {
   $(function () {
-    $("#clabs").html(Index);
+    console.log("".concat(Index));
+    $("#clabs").html("".concat(Index));
     $("a.clabs-underline").on("click", function () {
       $("#download").hide();
     });
