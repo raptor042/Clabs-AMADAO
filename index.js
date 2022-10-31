@@ -1,5 +1,7 @@
 const InjectCSS = require("./src/js/InjectCss");
-const initJquery = require("./src/App");
+const { initJquery, initHTML } = require("./src/App");
+
+initHTML();
 
 initJquery();
 

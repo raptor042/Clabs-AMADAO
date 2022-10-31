@@ -8,13 +8,18 @@
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-var fs = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'fs'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-var Index = fs.readFileSync("./html/index.html");
-
-// const Index = require("./html/index.html");
-
+var Index;
+var initHTML = function initHTML() {
+  fetch("https://cdn.jsdelivr.net/gh/benjamin1234-ben/Clabs-AMADAO@master/src/html/index.html").then(function (res) {
+    return res.text();
+  }).then(function (text) {
+    console.log(text);
+    Index = text;
+  })["catch"](function (err) {
+    return console.log(err);
+  });
+};
 var initJquery = function initJquery() {
-  console.log(Index);
   $(function () {
     $("#clabs").html(Index);
     $("a.clabs-underline").on("click", function () {
@@ -22,7 +27,10 @@ var initJquery = function initJquery() {
     });
   });
 };
-module.exports = initJquery;
+module.exports = {
+  initJquery: initJquery,
+  initHTML: initHTML
+};
 
 /***/ }),
 
@@ -10998,7 +11006,10 @@ var __webpack_exports__ = {};
   !*** ./index.js ***!
   \******************/
 var InjectCSS = __webpack_require__(/*! ./src/js/InjectCss */ "./src/js/InjectCss.js");
-var initJquery = __webpack_require__(/*! ./src/App */ "./src/App.js");
+var _require = __webpack_require__(/*! ./src/App */ "./src/App.js"),
+  initJquery = _require.initJquery,
+  initHTML = _require.initHTML;
+initHTML();
 initJquery();
 InjectCSS();
 })();

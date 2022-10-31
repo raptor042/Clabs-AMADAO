@@ -1,11 +1,16 @@
 const $ = require("jquery");
-const fs = require("fs");
-const Index = fs.readFileSync("./html/index.html");
+let Index;
 
-// const Index = require("./html/index.html");
+const initHTML = () => {
+    fetch("https://cdn.jsdelivr.net/gh/benjamin1234-ben/Clabs-AMADAO@master/src/html/index.html")
+    .then(res => res.text())
+    .then(text => {
+        console.log(text);
+        Index = text;
+    }).catch(err => console.log(err));
+}
 
 const initJquery = () => {
-    console.log(Index);
     $(function() {
         $("#clabs").html(Index);
 
@@ -15,4 +20,4 @@ const initJquery = () => {
     });
 };
 
-module.exports = initJquery;
+module.exports = { initJquery, initHTML };
